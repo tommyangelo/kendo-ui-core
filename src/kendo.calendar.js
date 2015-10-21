@@ -70,7 +70,7 @@ var __meta__ = { // jshint ignore:line
 
     var Calendar = Widget.extend({
         init: function(element, options) {
-            var that = this, value, id, current;
+            var that = this, value, id;
 
             Widget.fn.init.call(that, element, options);
 
