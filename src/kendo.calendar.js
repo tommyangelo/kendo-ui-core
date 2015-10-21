@@ -1382,7 +1382,6 @@ var __meta__ = { // jshint ignore:line
 
 
     function getDisabledExpr(option) {
-        var that = this;
         if (kendo.isFunction(option)) {
             return option;
         }
@@ -1390,14 +1389,13 @@ var __meta__ = { // jshint ignore:line
         if ($.isArray(option)) {
             return createDisabledExpr(option);
         }
-        return new Function();
+        return new Function(); //jshint ignore:line
     }
 
     function createDisabledExpr(dates) {
-        var body,
-        callback,
-        disabledDates = [],
-        days = ["su", "mo", "tu", "we", "th", "fr", "sa"];
+        var body, callback,
+            disabledDates = [],
+            days = ["su", "mo", "tu", "we", "th", "fr", "sa"];
 
         for (var i = 0; i < dates.length; i++) {
             var day = dates[i].toLowerCase();
@@ -1414,7 +1412,7 @@ var __meta__ = { // jshint ignore:line
                 "return false" +
             "}";
 
-        callback = new Function(["date"],body);
+        callback = new Function(["date"],body); //jshint ignore:line
 
         return callback;
     }
