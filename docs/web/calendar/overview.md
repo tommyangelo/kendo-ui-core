@@ -108,3 +108,41 @@ example of the object passed to the template function:
         value: date.getDate(),
         dateString: "2011/0/1" // formatted date using yyyy/MM/dd format and month is zero-based
     };
+
+## Disable Dates
+
+Kendo UI Calendar widget provides the functionality to disable certain days, such as weekends, national holidays, and others, which are not intended to be selected by the end user.  
+
+### Set an Array
+
+One way to disable a date is by setting an array. List the days that need to be disabled by using the first letters from their names in English:
+
+```html  
+   <div id="calendar"></div>
+   <script>
+    $("#calendar").kendoCalendar({
+		value: new Date(),
+		disableDates: ["we", "th"],
+	});
+  </script>
+```
+
+### Add a Function
+
+The other way to disable dates is by adding a function and determine its return value as `true` for the date that is disabled: 
+
+```html                                                
+    <div id="calendar"></div>
+    <script>
+    $("#calendar").kendoCalendar({                
+        disableDates: function (date) {
+            var disabled = [13,14,20,21];                
+            if (date && disabled.indexOf(date.getDate()) > -1 ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+	});
+    </script>
+```
