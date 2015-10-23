@@ -187,6 +187,7 @@ shows the decades from the century
 An array or function that will be used to determine which dates to be disabled for selection by the widget.
 
 #### Example - specify an array of days to be disabled
+
     <input id="datepicker" />
     <script>
     $("#datepicker").kendoDatePicker({
@@ -198,6 +199,7 @@ An array or function that will be used to determine which dates to be disabled f
 you can also pass a function that will be dynamically resolved for each date of the calendar. Note that when the function returns true, the date will be disabled.
 
 #### Example - use a function to disabled dates
+
     <input id="datepicker" />
     <script>
     $("#datepicker").kendoDatePicker({

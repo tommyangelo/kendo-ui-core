@@ -176,6 +176,7 @@ settings are available for the **depth** value:
 An array or function that will be used to determine which dates to be disabled for selection by the widget.
 
 #### Example - specify an array of days to be disabled
+
     <input id="datetimepicker" />
     <script>
     $("#datetimepicker").kendoDateTimePicker({
@@ -187,6 +188,7 @@ An array or function that will be used to determine which dates to be disabled f
 you can also pass a function that will be dynamically resolved for each date of the calendar. Note that when the function returns true, the date will be disabled.
 
 #### Example - use a function to disabled dates
+
     <input id="datetimepicker" />
     <script>
     $("#datetimepicker").kendoDateTimePicker({

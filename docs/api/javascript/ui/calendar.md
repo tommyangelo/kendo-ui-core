@@ -87,6 +87,7 @@ shows the decades from the century
 An array or function that will be used to determine which dates to be disabled in the calendar.
 
 #### Example - specify an array of days to be disabled
+
     <div id="calendar"></div>
     <script>
     $("#calendar").kendoCalendar({
@@ -98,6 +99,7 @@ An array or function that will be used to determine which dates to be disabled i
 you can also pass a function that will be dynamically resolved for each date of the calendar. Note that when the function returns true, the date will be disabled.
 
 #### Example - use a function to disabled dates
+
     <div id="calendar"></div>
     <script>
     $("#calendar").kendoCalendar({
